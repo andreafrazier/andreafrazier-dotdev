@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Metadata } from 'next';
-import { Mail, Linkedin, MapPin } from 'lucide-react';
+import { Mail, Link as LinkIcon, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Contact | Andrea Frazier',
@@ -32,7 +32,6 @@ export default function Contact() {
           
           <a  href="mailto:andrea@andreafrazier.dev">
             className="text-primary hover:underline"
-        
             andrea@andreafrazier.dev
           </a>
         </div>
@@ -40,7 +39,7 @@ export default function Contact() {
         {/* LinkedIn */}
         <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
           <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Linkedin className="h-8 w-8 text-primary" />
+            <LinkIcon className="h-8 w-8 text-primary" />
           </div>
           <h3 className="font-semibold text-secondary mb-2">LinkedIn</h3>
           
@@ -71,87 +70,87 @@ export default function Contact() {
         </h2>
         
         <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          className="space-y-6"
-        >
-          {/* Netlify form detection */}
-          <input type="hidden" name="form-name" value="contact" />
-          
-          {/* Honeypot field for spam protection */}
-          <p className="hidden">
-            <label>
-              Don't fill this out if you're human: <input name="bot-field" />
-            </label>
-          </p>
-
-          {/* Name */}
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-              Name *
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-            />
-          </div>
-
-          {/* Email */}
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-              Email *
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-            />
-          </div>
-
-          {/* Subject */}
-          <div>
-            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-              Subject *
-            </label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-            />
-          </div>
-
-          {/* Message */}
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-              Message *
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={6}
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-            />
-          </div>
-
-          {/* Submit Button */}
-          <div className="text-center">
-            <button
-              type="submit"
-              className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            name="contact"
+            method="POST"
+            action="/success"
+            netlify-honeypot="bot-field"
+            className="space-y-6"
             >
-              Send Message
-            </button>
-          </div>
+            {/* Netlify form detection */}
+            <input type="hidden" name="form-name" value="contact" />
+            
+            {/* Honeypot field for spam protection */}
+            <p className="hidden">
+                <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+            </p>
+
+            {/* Name */}
+            <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                Name *
+                </label>
+                <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+            </div>
+
+            {/* Email */}
+            <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                Email *
+                </label>
+                <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+            </div>
+
+            {/* Subject */}
+            <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                Subject *
+                </label>
+                <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+            </div>
+
+            {/* Message */}
+            <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                Message *
+                </label>
+                <textarea
+                id="message"
+                name="message"
+                rows={6}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+            </div>
+
+            {/* Submit Button */}
+            <div className="text-center">
+                <button
+                type="submit"
+                className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                Send Message
+                </button>
+            </div>
         </form>
       </div>
 
