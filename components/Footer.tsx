@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Circle, Link as LinkIcon, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -56,7 +56,7 @@ export default function Footer() {
                 className="text-gray-300 hover:text-white transition-colors"
                 aria-label="GitHub"
              <a>
-                <Github className="h-6 w-6" />
+                <Circle className="h-6 w-6" />
               </a>
               
                 href="https://linkedin.com/in/andreafrazier"
@@ -65,7 +65,7 @@ export default function Footer() {
                 className="text-gray-300 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               <a>
-                <Linkedin className="h-6 w-6" />
+                <LinkIcon className="h-6 w-6" />
               </a>
               
                 href="mailto:andrea@andreafrazier.dev"
