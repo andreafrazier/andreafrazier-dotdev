@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
 import { ArrowRight, Code, Users, Zap } from 'lucide-react';
 
